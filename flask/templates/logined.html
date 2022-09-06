@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>智能回收桶系統設定</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'main.css') }}">
+		<script  language="JavaScript"> 
+			　　function MyAutoRun()
+			　　{ 
+			
+			log = localStorage.getItem('log');
+			
+			if(log!="test123"){
+				alert("請先完成登入!");
+				document.location.href="https://smart-can.herokuapp.com/系統管理";
+			}	
+			　　}
+		</script>
+	</head>
+	<body class="is-preload" onload="MyAutoRun();">
+		<div id="page-wrapper">
+			<!-- Main -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div id="content">
+
+							<!-- Content -->
+
+								<article>
+									<header>
+										<h2>管理設定</h2>
+									</header>
+
+									<span class="image featured"><img src="{{ url_for('static', filename='banner.jpg') }}" alt="" /></span>
+									<section>
+                                        <h1>各項設定施工中</h1>
+									</section>
+								</article>
+								<article>
+									<header>
+										<h2>更改回收桶地址</h2>
+										<h4>現在回收桶位置</h4>
+									</header>
+									<h1>輸入網址以更改回收桶位置</h1>
+									<form>
+										
+										<div class="row gtr-50">
+											<div class="col-12">
+												<textarea name="maphttp" id="maphttp" placeholder="地圖網址" rows="1"></textarea>
+											</div>
+										</div>
+										<div class="col-12">
+											<ul class="actions">
+												<li><input type="button" class="button alt" value="更改" onclick="processFormData();" /></li>
+											</ul>
+										</div>
+									</form>
+									<input type="button" value="目前位置" onclick="map();"/>
+									<a href="https://www.google.com.tw/maps/@24.2201031,120.9558744,10z?hl=zh-TW" class="button" target="_blank">google地圖</a>
+								</article>
+
+						</div>
+					</div>
+				</section>
+				<section id="cta" class="wrapper style3">
+					<div class="container">
+						<header>
+							<a href="https://smart-can.herokuapp.com/" class="button" onclick="logout();">登出</a>
+						</header>
+					</div>
+				</section>
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+							<img src="static/earth.png">
+							<section class="col-6 col-12-narrower">
+								<h3>意見反饋</h3>
+								<form>
+									<div class="row gtr-50">
+										<div class="col-6 col-12-mobilep">
+											<input type="text" name="name" id="name" placeholder="姓名" />
+										</div>
+										<div class="col-6 col-12-mobilep">
+											<input type="email" name="email" id="email" placeholder="電子信箱" />
+										</div>
+										<div class="col-12">
+											<textarea name="message" id="message" placeholder="意見反饋" rows="5"></textarea>
+										</div>
+										<div class="col-12">
+											<ul class="actions">
+												<li><input type="submit" class="button alt" value="寄送" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>
+						</div>
+					</div>
+
+					<!-- Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
+						</ul>
+
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; 宜蘭大學電子系</li><li>設計: <a href="https://ecewww.niu.edu.tw/">智能回收桶運行團隊</a></li>
+							</ul>
+						</div>
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="static/jquery.min.js"></script>
+			<script src="static/jquery.dropotron.min.js"></script>
+			<script src="static/browser.min.js"></script>
+			<script src="static/breakpoints.min.js"></script>
+			<script src="static/util.js"></script>
+			<script src="static/main.js"></script>
+			<script src="static/map.js"></script>
+
+	</body>
+</html>

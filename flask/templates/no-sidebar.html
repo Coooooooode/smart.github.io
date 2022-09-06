@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>智能回收桶系統設定</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'main.css') }}">
+		<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+						<h1><a href="https://smart-can.herokuapp.com/" id="logo">智能回收桶</a></h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="https://smart-can.herokuapp.com/">首頁</a></li>
+								<li><a href="https://smart-can.herokuapp.com/計畫緣由">計畫緣由</a></li>
+								<li><a href="https://smart-can.herokuapp.com/目前位置">目前位置</a></li>
+								<li><a href="https://smart-can.herokuapp.com/目前容量">目前容量</a></li>
+								<li class="current"><a href="https://smart-can.herokuapp.com/系統管理">系統管理</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div id="content">
+
+							<!-- Content -->
+
+								<article>
+									<header>
+										<h2>系統管理</h2>
+									</header>
+
+									<span class="image featured"><img src="{{ url_for('static', filename='banner.jpg') }}" alt="" /></span>
+									<section class="col-6 col-12-narrower">
+										<h3>登入系統</h3>
+										<h5>(目前為測試階段 帳:test 密:123)</h5>
+										<form method="get" action="https://smart-can.herokuapp.com/管理設定" name="myform">
+											<div class="row gtr-50">
+												<div class="col-6 col-12-mobilep">
+													<input type="text" name="name" id="name" class="kuang" placeholder="帳號" />
+												</div>
+												<div class="col-6 col-12-mobilep">
+													<input type="password" name="pw" id="pw" class="kuang" placeholder="密碼" required/>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" class="tijiao" value="登入" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+										<script>
+											$(".tijiao").click(function(){
+											if($("#name").val() == "test" && $("#pw").val() == "123") {
+											alert("登入！");
+											var log = $("#name").val()+$("#pw").val();
+											localStorage.setItem('log',log);
+											}else{
+											alert("帳號或密碼不正確！");
+											return false;}
+											})
+										</script>
+									</section>
+								</article>
+								<hr/>
+								<hr/>
+								<hr/>
+								<form>
+									<header><h2 id="fix">請敘述目前回收桶的狀況，以便維修人員快速排查狀況</h2></header>
+									<h3>請盡可能描述機器出現的問題。</h3>
+									<textarea name="issue" id="issue" placeholder="回收桶的故障問題" rows="5"></textarea>
+									<ul class="actions">
+										<li><input type="submit" class="button alt" value="寄送" /></li>
+									</ul>
+								</form>
+						</div>
+					</div>
+				</section>
+				
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+							<img src="static/earth.png">
+							<section class="col-6 col-12-narrower">
+								<h3>意見反饋</h3>
+								<form>
+									<div class="row gtr-50">
+										<div class="col-6 col-12-mobilep">
+											<input type="text" name="name" id="name" placeholder="姓名" />
+										</div>
+										<div class="col-6 col-12-mobilep">
+											<input type="email" name="email" id="email" placeholder="電子信箱" />
+										</div>
+										<div class="col-12">
+											<textarea name="message" id="message" placeholder="意見反饋" rows="5"></textarea>
+										</div>
+										<div class="col-12">
+											<ul class="actions">
+												<li><input type="submit" class="button alt" value="寄送" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>
+						</div>
+					</div>
+
+					<!-- Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
+						</ul>
+
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; 宜蘭大學電子系</li><li>設計: <a href="https://ecewww.niu.edu.tw/">智能回收桶運行團隊</a></li>
+							</ul>
+						</div>
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="static/jquery.min.js"></script>
+			<script src="static/jquery.dropotron.min.js"></script>
+			<script src="static/browser.min.js"></script>
+			<script src="static/breakpoints.min.js"></script>
+			<script src="static/util.js"></script>
+			<script src="static/main.js"></script>
+		
+	</body>
+</html>

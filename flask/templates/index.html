@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>智能回收桶</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'main.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'fontawesome-all.min.css') }}">
+		
+	</head>
+	<body class="is-preload">
+
+		<div id="page-wrapper">
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+						<h1><a href="https://smart-can.herokuapp.com/" id="logo">智能回收桶</a></h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="https://smart-can.herokuapp.com/">首頁</a></li>
+								<li><a href="https://smart-can.herokuapp.com/計畫緣由">計畫緣由</a></li>
+								<li><a href="https://smart-can.herokuapp.com/目前位置">目前位置</a></li>
+								<li><a href="https://smart-can.herokuapp.com/目前容量">目前容量</a></li>
+								<li><a href="https://smart-can.herokuapp.com/系統管理">系統管理</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Banner -->
+				<div>
+					<a href="#" class="image"><img src="{{ url_for('static', filename='banner.jpg') }}" width=100%></a>
+					<header>
+						<center><h2><em>我們樂意為您介紹此回收桶的運行原理</em></h2></center>
+						<center><h4><em><a href="https://smart-can.herokuapp.com/計畫緣由#introduce" class="button">Learn More</a></em></h4></center>
+					</header>
+				</div>
+					
+
+			<!-- Highlights -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row gtr-200">
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+									<i class="icon solid major fa-paper-plane"></i>
+									<h3>及時通知</h3>
+									<p>回收桶目前裝載量將會即時顯示，需要清運時將會自動通知負責人員</p>
+								</div>
+							</section>
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+									<i class="icon solid major fa-pencil-alt"></i>
+									<h3>滾動調整</h3>
+									<p>我們將會視各地區的情況需要進行滾動式調整，以符合不同地區的需求</p>
+								</div>
+							</section>
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+									<i class="icon solid major fa-wrench"></i>
+									<h3>定期維護</h3>
+									<p>我們會定期派員對回收桶進行維護，以確保可以為顧客提供最好服務品質</p>
+								</div>
+							</section>
+						</div>
+					</div>
+				</section>
+
+			<!-- Gigantic Heading -->
+				<section class="wrapper style2">
+					<div class="container">
+						<header class="major">
+							<h2>乾淨的地球．由分類做起</h2>
+							<p>確實進行垃圾分類，可減少大量廢棄物</p>
+						</header>
+					</div>
+				</section>
+
+			<!-- Posts -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row">
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="https://zh.wikipedia.org/wiki/%E5%AF%B6%E7%89%B9%E7%93%B6" class="image left"><img src="{{ url_for('static', filename='pic01.jpg') }}"></a>
+									<div class="inner">
+										<h3>寶特瓶</h3>
+										<p>第一分類區為寶特瓶，各式生活常見之塑膠製寶特瓶均屬於此類</p>
+									</div>
+								</div>
+							</section>
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="https://zh.wikipedia.org/zh-tw/%E6%98%93%E6%8B%89%E7%BD%90" class="image left"><img src="{{ url_for('static', filename='pic02.jpg') }}"></a>
+									<div class="inner">
+										<h3>鐵、鋁罐</h3>
+										<p>第二分類區為罐裝飲料，如可樂、雪碧等各式鐵、鋁罐均屬於此類</p>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="row">
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="https://zh.m.wikipedia.org/zh-tw/%E7%8E%BB%E7%92%83" class="image left"><img src="{{ url_for('static', filename='pic03.jpg') }}"></a>
+									<div class="inner">
+										<h3>玻璃瓶</h3>
+										<p>第三分類區為玻璃瓶，各式以玻璃為材料製成之玻璃瓶均屬於此類</p>
+									</div>
+								</div>
+							</section>
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="https://www.wealth.com.tw/articles/57e43c8e-bb14-4bed-983f-6a7469217da5" class="image left"><img src="{{ url_for('static', filename='pic04.jpg') }}"></a>
+									<div class="inner">
+										<h3>廢紙容器</h3>
+										<p>第四分類區為廢紙容器，以紙做之紙餐盒、鋁箔包等容器均屬於此類</p>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</section>
+
+			<!-- CTA -->
+				<section id="cta" class="wrapper style3">
+					<div class="container">
+						<header>
+							<h2>回收桶無法運行?</h2>
+							<a href="https://smart-can.herokuapp.com/系統管理#fix" class="button">通報故障</a>
+						</header>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+							<img src="static/earth.png">
+							<section class="col-6 col-12-narrower">
+								<h3>意見反饋</h3>
+								<form>
+									<div class="row gtr-50">
+										<div class="col-6 col-12-mobilep">
+											<input type="text" name="name" id="name" placeholder="姓名" />
+										</div>
+										<div class="col-6 col-12-mobilep">
+											<input type="email" name="email" id="email" placeholder="電子信箱" />
+										</div>
+										<div class="col-12">
+											<textarea name="message" id="message" placeholder="意見反饋" rows="5"></textarea>
+										</div>
+										<div class="col-12">
+											<ul class="actions">
+												<li><input type="submit" class="button alt" value="寄送" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>
+						</div>
+					</div>
+
+					<!-- Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
+						</ul>
+
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; 宜蘭大學電子系</li><li>設計: <a href="https://ecewww.niu.edu.tw/">智能回收桶運行團隊</a></li>
+							</ul>
+						</div>
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="static/jquery.min.js"></script>
+			<script src="static/jquery.dropotron.min.js"></script>
+			<script src="static/browser.min.js"></script>
+			<script src="static/breakpoints.min.js"></script>
+			<script src="static/util.js"></script>
+			<script src="static/main.js"></script>
+
+	</body>
+</html>
